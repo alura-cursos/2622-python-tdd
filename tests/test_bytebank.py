@@ -40,6 +40,18 @@ class TestClass:
 
         assert resultado == esperado  # then
 
+    def test_quando_calcular_bonus_recebe_100000000_deve_retornar_exception(self):
+        with pytest.raises(Exception):
+            entrada = 100000000  # given
+
+            funconario_teste = Funcionario('teste', '11/11/2000', entrada)
+            resultado = funconario_teste.calcular_bonus()  # when
+
+            assert resultado  # then
+
+
+
+
 
 
 
